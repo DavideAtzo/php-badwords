@@ -9,11 +9,17 @@
 <body>
     <?php
     $paragraph = $_GET["paragraph"];
+    $badword = $_GET["badword"];
+    $badword_censored = str_replace($badword, '***', $paragraph);
     ?>
 
     <div>
         <p><?php echo $paragraph ?></p>
         <div>La frase è composta da <?php echo strlen($paragraph); ?> caratteri.</div>
+    </div>
+    <div>
+        <p>La frase con censura:<?php echo $badword_censored; ?></p>
+        <div class="length"><?php echo strlen($badword_censored); ?></div>
     </div>
 
 </body>
