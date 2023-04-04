@@ -7,7 +7,15 @@
     <title>badwords php</title>
 </head>
 <body>
-    
+    <?php
+    $paragraph = $_GET["paragraph"];
+    ?>
+
+    <div>
+        <p><?php echo $paragraph ?></p>
+        <div>La frase è composta da <?php echo strlen($paragraph); ?> caratteri.</div>
+    </div>
+
 </body>
 
 </html>
